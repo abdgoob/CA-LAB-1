@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch with all views",
             "program": "${file}",
-            "stopOnEntry": true,
+            "stopOnEntry": false,
             "stopAtBreakpoints": true,
             "openViews": [
                 "Robot",

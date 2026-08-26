@@ -2,8 +2,16 @@
 .globl main
 
 main:
+    # Initialize four byte inputs: 1, 2, 3, 4.
+    li  x8, 0x04030201
+    sw  x8, 0x100(x0)
 
-    
+    # Initialize four halfword inputs: 10, 20, 30, 40.
+    li  x8, 0x0014000A
+    sw  x8, 0x200(x0)
+    li  x8, 0x0028001E
+    sw  x8, 0x204(x0)
+
     lb  x5,  0x100(x0)       
     lh  x6,  0x200(x0)      
     add x7,  x5, x6           
@@ -24,4 +32,5 @@ main:
     add x7,  x5, x6        
     sw  x7,  0x30C(x0)     
 end:
+    ebreak
     j end
